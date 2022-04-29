@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',
+    sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    z-index: 20;
+    position: fixed;
+    padding-left: 70px;
+    padding-right: 70px;
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mob-nav {
+    display: none;
+}
+
+nav a {
+    color: white;
+}
+
+.logo-wrapper a {
+    letter-spacing: 10px;
+    font-weight: bold;
+}
+
+.link-wrapper {
+    display: flex;
+    width: 250px;
+    /* background-color:blue; */
+    justify-content: space-between;
+}
+
+.hamburger {
+    width: 50px;
+    height: 30px;
+}
+
+.line {
+    width: 50px;
+    height: 3px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* CTA */
+.cta {
+    background-color: antiquewhite;
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 78%);
+}
+.cta img {
+    width: 30vw;
+}
+.cta-btn {
+    color: white;
+    font-weight: 800;
+    border-radius: 10px;
+    display: flex;
+    width: 150px;
+    height: 50px;
+    margin-top: 30px;
+    /* padding: 20px; */
+    background-color: #00B0FF;
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (max-width: 900px ) {
+    nav {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .mob-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .link-wrapper {
+        display: none;
+    }
+    .cta {
+        display: flex;
+        flex-direction: column;
+        clip-path: none;
+    }
+    .cta img {
+        margin-top: 50px;
+        width: 40vw;
+    }
+}
